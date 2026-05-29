@@ -45,13 +45,13 @@ CREATE OR REPLACE AGENT REALTY_INCOME.AGENT.REIT_ADVISOR
       - For risk-related questions: combine Portfolio Analytics data with Document Search context
       - If a question is ambiguous, prefer the structured data tools first, then supplement with document search
 
-  sample_questions:
-    - question: "What is the current portfolio occupancy rate and how has it trended over the past 2 years?"
-    - question: "Which tenants represent the highest concentration risk in the portfolio?"
-    - question: "What was discussed in the most recent earnings call regarding European expansion?"
-    - question: "Show me properties with leases expiring in the next 12 months that have high-risk tenants"
-    - question: "How does Realty Income's dividend yield compare to the 10-year Treasury spread historically?"
-    - question: "What is the average cap rate by property type and how does it relate to risk scores?"
+    sample_questions:
+      - question: "What is the current portfolio occupancy rate and how has it trended over the past 2 years?"
+      - question: "Which tenants represent the highest concentration risk in the portfolio?"
+      - question: "What was discussed in the most recent earnings call regarding European expansion?"
+      - question: "Show me properties with leases expiring in the next 12 months that have high-risk tenants"
+      - question: "How does Realty Income's dividend yield compare to the 10-year Treasury spread historically?"
+      - question: "What is the average cap rate by property type and how does it relate to risk scores?"
 
   tools:
     - tool_spec:

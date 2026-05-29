@@ -73,7 +73,7 @@ CREATE OR REPLACE SEMANTIC VIEW REIT_PORTFOLIO_ANALYSIS
     tenants.tenant_name AS TENANT_NAME
       WITH SYNONYMS = ('company name', 'lessee name', 'renter')
       COMMENT = 'Name of the tenant company',
-    tenants.industry AS TENANT_INDUSTRY
+    tenants.tenant_industry AS INDUSTRY
       WITH SYNONYMS = ('tenant sector', 'business type')
       COMMENT = 'Industry classification of the tenant',
     tenants.credit_rating AS CREDIT_RATING
@@ -82,7 +82,7 @@ CREATE OR REPLACE SEMANTIC VIEW REIT_PORTFOLIO_ANALYSIS
     leases.lease_type AS LEASE_TYPE
       WITH SYNONYMS = ('contract type', 'NNN', 'triple net')
       COMMENT = 'Type of lease agreement',
-    leases.status AS LEASE_STATUS
+    leases.lease_status AS STATUS
       COMMENT = 'Current status of the lease (Active, Expired)',
     financial_metrics.fiscal_year AS FISCAL_YEAR
       COMMENT = 'Fiscal year of the financial reporting period',
@@ -141,11 +141,11 @@ CREATE OR REPLACE SEMANTIC VIEW REIT_PORTFOLIO_ANALYSIS
       COMMENT = 'Number of high-risk assessments'
   )
 
+  COMMENT = 'Comprehensive semantic view for Realty Income REIT portfolio analysis covering properties, tenants, leases, financials, and risk'
+
   AI_SQL_GENERATION 'When generating SQL for REIT analysis: (1) Always use fully qualified table names. (2) Round financial figures to 2 decimal places. (3) Express rates and percentages with 1 decimal place. (4) When asked about occupancy, default to portfolio-level occupancy from PROPERTIES table. (5) For FFO/AFFO metrics, clarify whether per-share or total is needed. (6) Default time period is most recent fiscal year unless specified.'
 
-  AI_QUESTION_CATEGORIZATION 'This semantic view covers Realty Income REIT portfolio analytics including properties, tenants, leases, financial performance, and risk. If a question is about stock trading advice or personal investment recommendations, explain that this tool provides data analysis only, not investment advice. If the question is about non-REIT topics unrelated to real estate investment trusts, explain the scope limitation.'
-
-  COMMENT = 'Comprehensive semantic view for Realty Income REIT portfolio analysis covering properties, tenants, leases, financials, and risk';
+  AI_QUESTION_CATEGORIZATION 'This semantic view covers Realty Income REIT portfolio analytics including properties, tenants, leases, financial performance, and risk. If a question is about stock trading advice or personal investment recommendations, explain that this tool provides data analysis only, not investment advice. If the question is about non-REIT topics unrelated to real estate investment trusts, explain the scope limitation.';
 
 
 CREATE OR REPLACE SEMANTIC VIEW REIT_MARKET_PERFORMANCE
@@ -153,15 +153,17 @@ CREATE OR REPLACE SEMANTIC VIEW REIT_MARKET_PERFORMANCE
   TABLES (
     portfolio_summary AS REALTY_INCOME.RAW.PORTFOLIO_SUMMARY
       PRIMARY KEY (SUMMARY_ID)
+      UNIQUE (REPORTING_DATE)
       COMMENT = 'Quarterly portfolio-level summary metrics',
     market_data AS REALTY_INCOME.RAW.MARKET_DATA
       PRIMARY KEY (MARKET_ID)
+      UNIQUE (MARKET_DATE)
       COMMENT = 'Daily stock market and pricing data'
   )
 
   RELATIONSHIPS (
-    market_to_portfolio AS
-      market_data (MARKET_DATE) REFERENCES portfolio_summary (REPORTING_DATE)
+    portfolio_to_market AS
+      portfolio_summary (REPORTING_DATE) REFERENCES market_data (MARKET_DATE)
   )
 
   FACTS (
@@ -209,6 +211,6 @@ CREATE OR REPLACE SEMANTIC VIEW REIT_MARKET_PERFORMANCE
       COMMENT = 'Average spread to 10-year Treasury'
   )
 
-  AI_SQL_GENERATION 'For market performance queries: (1) Default to most recent available data unless a specific date range is requested. (2) When comparing to benchmarks, include both REIT performance and S&P 500 return. (3) Format stock prices to 2 decimal places and percentages to 1 decimal place. (4) For time series, order by date ascending.'
+  COMMENT = 'Semantic view for Realty Income market performance and portfolio summary analysis'
 
-  COMMENT = 'Semantic view for Realty Income market performance and portfolio summary analysis';
+  AI_SQL_GENERATION 'For market performance queries: (1) Default to most recent available data unless a specific date range is requested. (2) When comparing to benchmarks, include both REIT performance and S&P 500 return. (3) Format stock prices to 2 decimal places and percentages to 1 decimal place. (4) For time series, order by date ascending.';

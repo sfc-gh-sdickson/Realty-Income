@@ -1,93 +1,207 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="Arial, sans-serif">
-  <rect width="900" height="500" fill="#F8FAFC" rx="8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="phase1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#10B981"/>
+    </linearGradient>
+    <linearGradient id="phase2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563EB"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="phase3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EA580C"/>
+      <stop offset="100%" style="stop-color:#F97316"/>
+    </linearGradient>
+    <linearGradient id="phase4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DB2777"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+    <linearGradient id="phase5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+    <filter id="dshadow" x="-4%" y="-4%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <filter id="dshadowLg" x="-4%" y="-4%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="darrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9CA3AF"/>
+    </marker>
+  </defs>
 
-  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1B9CD9">Deployment Flow</text>
+  <rect width="1100" height="780" fill="#FFFFFF" rx="12"/>
 
-  <rect x="30" y="50" width="160" height="60" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2" rx="6"/>
-  <text x="110" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Step 1</text>
-  <text x="110" y="92" text-anchor="middle" font-size="9" fill="#333">Database &amp; Schemas</text>
-  <text x="110" y="104" text-anchor="middle" font-size="8" fill="#666">Warehouse, Stages</text>
+  <text x="550" y="38" text-anchor="middle" fill="#111827" font-size="24" font-weight="bold">Deployment Flow</text>
+  <text x="550" y="58" text-anchor="middle" fill="#6B7280" font-size="12">10-Step Sequential Deployment Pipeline</text>
 
-  <rect x="210" y="50" width="160" height="60" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2" rx="6"/>
-  <text x="290" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Step 2</text>
-  <text x="290" y="92" text-anchor="middle" font-size="9" fill="#333">Create 9 Tables</text>
-  <text x="290" y="104" text-anchor="middle" font-size="8" fill="#666">Properties, Tenants, etc.</text>
+  <rect x="30" y="80" width="1040" height="28" fill="#F9FAFB" stroke="#E5E7EB" rx="4" filter="url(#dshadow)"/>
+  <text x="90" y="99" fill="#374151" font-size="10" font-weight="bold">PHASE</text>
+  <rect x="140" y="86" width="12" height="16" fill="url(#phase1)" rx="2"/>
+  <text x="158" y="99" fill="#059669" font-size="9">Infrastructure</text>
+  <rect x="255" y="86" width="12" height="16" fill="url(#phase2)" rx="2"/>
+  <text x="273" y="99" fill="#2563EB" font-size="9">Intelligence</text>
+  <rect x="360" y="86" width="12" height="16" fill="url(#phase3)" rx="2"/>
+  <text x="378" y="99" fill="#EA580C" font-size="9">Data</text>
+  <rect x="430" y="86" width="12" height="16" fill="url(#phase4)" rx="2"/>
+  <text x="448" y="99" fill="#DB2777" font-size="9">ML</text>
+  <rect x="490" y="86" width="12" height="16" fill="url(#phase5)" rx="2"/>
+  <text x="508" y="99" fill="#7C3AED" font-size="9">Agent</text>
 
-  <rect x="390" y="50" width="160" height="60" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2" rx="6"/>
-  <text x="470" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Step 3</text>
-  <text x="470" y="92" text-anchor="middle" font-size="9" fill="#333">FIBO Ontology</text>
-  <text x="470" y="104" text-anchor="middle" font-size="8" fill="#666">Tags &amp; Classification</text>
+  <rect x="50" y="125" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="50" y="125" width="200" height="26" fill="url(#phase1)" rx="8"/>
+  <rect x="50" y="143" width="200" height="8" fill="url(#phase1)"/>
+  <circle cx="70" cy="138" r="10" fill="white" stroke="#059669" stroke-width="2"/>
+  <text x="70" y="142" text-anchor="middle" fill="#059669" font-size="10" font-weight="bold">1</text>
+  <text x="155" y="142" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Database Setup</text>
+  <text x="150" y="170" text-anchor="middle" fill="#4B5563" font-size="9">CREATE DATABASE REALTY_INCOME</text>
+  <text x="150" y="185" text-anchor="middle" fill="#6B7280" font-size="9">Schemas: RAW | ANALYTICS</text>
+  <text x="150" y="200" text-anchor="middle" fill="#6B7280" font-size="9">ML | AGENT + Warehouse</text>
 
-  <rect x="570" y="50" width="160" height="60" fill="#FFF3E0" stroke="#FF9800" stroke-width="2" rx="6"/>
-  <text x="650" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Step 4</text>
-  <text x="650" y="92" text-anchor="middle" font-size="9" fill="#333">Synthetic Data</text>
-  <text x="650" y="104" text-anchor="middle" font-size="8" fill="#666">~7,700 rows</text>
+  <rect x="280" y="125" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="280" y="125" width="200" height="26" fill="url(#phase1)" rx="8"/>
+  <rect x="280" y="143" width="200" height="8" fill="url(#phase1)"/>
+  <circle cx="300" cy="138" r="10" fill="white" stroke="#059669" stroke-width="2"/>
+  <text x="300" y="142" text-anchor="middle" fill="#059669" font-size="10" font-weight="bold">2</text>
+  <text x="385" y="142" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Create Tables</text>
+  <text x="380" y="170" text-anchor="middle" fill="#4B5563" font-size="9">9 Tables with PKs &amp; FKs</text>
+  <text x="380" y="185" text-anchor="middle" fill="#6B7280" font-size="9">Properties | Tenants | Leases</text>
+  <text x="380" y="200" text-anchor="middle" fill="#6B7280" font-size="9">Financials | Market | Risk</text>
 
-  <rect x="750" y="50" width="120" height="60" fill="#E3F2FD" stroke="#2196F3" stroke-width="2" rx="6"/>
-  <text x="810" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Step 5</text>
-  <text x="810" y="92" text-anchor="middle" font-size="9" fill="#333">Analytics Views</text>
-  <text x="810" y="104" text-anchor="middle" font-size="8" fill="#666">8 Views</text>
+  <rect x="510" y="125" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="510" y="125" width="200" height="26" fill="url(#phase1)" rx="8"/>
+  <rect x="510" y="143" width="200" height="8" fill="url(#phase1)"/>
+  <circle cx="530" cy="138" r="10" fill="white" stroke="#059669" stroke-width="2"/>
+  <text x="530" y="142" text-anchor="middle" fill="#059669" font-size="10" font-weight="bold">3</text>
+  <text x="615" y="142" text-anchor="middle" fill="white" font-size="11" font-weight="bold">FIBO Ontology</text>
+  <text x="610" y="170" text-anchor="middle" fill="#4B5563" font-size="9">5 Classification Tags</text>
+  <text x="610" y="185" text-anchor="middle" fill="#6B7280" font-size="9">Financial Industry Standard</text>
+  <text x="610" y="200" text-anchor="middle" fill="#6B7280" font-size="9">Data Dictionary View</text>
 
-  <path d="M190,80 L210,80" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M370,80 L390,80" fill="none" stroke="#666" stroke-width="1.5"/>
-  <path d="M550,80 L570,80" fill="none" stroke="#666" stroke-width="1.5"/>
-  <path d="M730,80 L750,80" fill="none" stroke="#666" stroke-width="1.5"/>
+  <rect x="740" y="125" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="740" y="125" width="200" height="26" fill="url(#phase3)" rx="8"/>
+  <rect x="740" y="143" width="200" height="8" fill="url(#phase3)"/>
+  <circle cx="760" cy="138" r="10" fill="white" stroke="#EA580C" stroke-width="2"/>
+  <text x="760" y="142" text-anchor="middle" fill="#EA580C" font-size="10" font-weight="bold">4</text>
+  <text x="845" y="142" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Synthetic Data</text>
+  <text x="840" y="170" text-anchor="middle" fill="#4B5563" font-size="9">~7,700 Rows Generated</text>
+  <text x="840" y="185" text-anchor="middle" fill="#6B7280" font-size="9">500 Props | 20 Tenants</text>
+  <text x="840" y="200" text-anchor="middle" fill="#6B7280" font-size="9">3K Financials | 1.4K Mkt</text>
 
-  <path d="M810,110 L810,140" fill="none" stroke="#666" stroke-width="1.5"/>
+  <line x1="250" y1="170" x2="280" y2="170" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#darrow)"/>
+  <line x1="480" y1="170" x2="510" y2="170" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#darrow)"/>
+  <line x1="710" y1="170" x2="740" y2="170" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#darrow)"/>
 
-  <rect x="30" y="140" width="200" height="60" fill="#E3F2FD" stroke="#2196F3" stroke-width="2" rx="6"/>
-  <text x="130" y="165" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Step 6</text>
-  <text x="130" y="182" text-anchor="middle" font-size="9" fill="#333">Semantic Views (2)</text>
-  <text x="130" y="194" text-anchor="middle" font-size="8" fill="#666">Portfolio + Market</text>
+  <path d="M940,215 L940,245 L150,245 L150,265" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#darrow)"/>
 
-  <rect x="250" y="140" width="200" height="60" fill="#FFF3E0" stroke="#FF9800" stroke-width="2" rx="6"/>
-  <text x="350" y="165" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Step 7</text>
-  <text x="350" y="182" text-anchor="middle" font-size="9" fill="#333">Cortex Search Service</text>
-  <text x="350" y="194" text-anchor="middle" font-size="8" fill="#666">Document RAG</text>
+  <rect x="50" y="265" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="50" y="265" width="200" height="26" fill="url(#phase2)" rx="8"/>
+  <rect x="50" y="283" width="200" height="8" fill="url(#phase2)"/>
+  <circle cx="70" cy="278" r="10" fill="white" stroke="#2563EB" stroke-width="2"/>
+  <text x="70" y="282" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="bold">5</text>
+  <text x="155" y="282" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Analytics Views</text>
+  <text x="150" y="310" text-anchor="middle" fill="#4B5563" font-size="9">8 Analytical Views</text>
+  <text x="150" y="325" text-anchor="middle" fill="#6B7280" font-size="9">Property Performance</text>
+  <text x="150" y="340" text-anchor="middle" fill="#6B7280" font-size="9">Portfolio Health | Risk</text>
 
-  <rect x="470" y="140" width="200" height="60" fill="#FCE4EC" stroke="#E91E63" stroke-width="2" rx="6"/>
-  <text x="570" y="165" text-anchor="middle" font-size="10" font-weight="bold" fill="#880E4F">Step 8</text>
-  <text x="570" y="182" text-anchor="middle" font-size="9" fill="#333">ML Models (Notebook)</text>
-  <text x="570" y="194" text-anchor="middle" font-size="8" fill="#666">Train &amp; Register</text>
+  <rect x="280" y="265" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="280" y="265" width="200" height="26" fill="url(#phase2)" rx="8"/>
+  <rect x="280" y="283" width="200" height="8" fill="url(#phase2)"/>
+  <circle cx="300" cy="278" r="10" fill="white" stroke="#2563EB" stroke-width="2"/>
+  <text x="300" y="282" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="bold">6</text>
+  <text x="385" y="282" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Semantic Views</text>
+  <text x="380" y="310" text-anchor="middle" fill="#4B5563" font-size="9">2 Semantic Views</text>
+  <text x="380" y="325" text-anchor="middle" fill="#6B7280" font-size="9">Portfolio Analysis (5 tables)</text>
+  <text x="380" y="340" text-anchor="middle" fill="#6B7280" font-size="9">Market Performance (2 tables)</text>
 
-  <rect x="690" y="140" width="180" height="60" fill="#FCE4EC" stroke="#E91E63" stroke-width="2" rx="6"/>
-  <text x="780" y="165" text-anchor="middle" font-size="10" font-weight="bold" fill="#880E4F">Step 9</text>
-  <text x="780" y="182" text-anchor="middle" font-size="9" fill="#333">ML SQL Functions</text>
-  <text x="780" y="194" text-anchor="middle" font-size="8" fill="#666">4 UDFs</text>
+  <rect x="510" y="265" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="510" y="265" width="200" height="26" fill="url(#phase3)" rx="8"/>
+  <rect x="510" y="283" width="200" height="8" fill="url(#phase3)"/>
+  <circle cx="530" cy="278" r="10" fill="white" stroke="#EA580C" stroke-width="2"/>
+  <text x="530" y="282" text-anchor="middle" fill="#EA580C" font-size="10" font-weight="bold">7</text>
+  <text x="615" y="282" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Cortex Search</text>
+  <text x="610" y="310" text-anchor="middle" fill="#4B5563" font-size="9">Document RAG Service</text>
+  <text x="610" y="325" text-anchor="middle" fill="#6B7280" font-size="9">18 Document Chunks</text>
+  <text x="610" y="340" text-anchor="middle" fill="#6B7280" font-size="9">1-hour Refresh Lag</text>
 
-  <path d="M450,170 L470,170" fill="none" stroke="#666" stroke-width="1.5"/>
-  <path d="M670,170 L690,170" fill="none" stroke="#666" stroke-width="1.5"/>
+  <rect x="740" y="265" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="740" y="265" width="200" height="26" fill="url(#phase4)" rx="8"/>
+  <rect x="740" y="283" width="200" height="8" fill="url(#phase4)"/>
+  <circle cx="760" cy="278" r="10" fill="white" stroke="#DB2777" stroke-width="2"/>
+  <text x="760" y="282" text-anchor="middle" fill="#DB2777" font-size="10" font-weight="bold">8</text>
+  <text x="845" y="282" text-anchor="middle" fill="white" font-size="11" font-weight="bold">ML Notebook</text>
+  <text x="840" y="310" text-anchor="middle" fill="#4B5563" font-size="9">Train &amp; Register Models</text>
+  <text x="840" y="325" text-anchor="middle" fill="#6B7280" font-size="9">Lease Renewal Predictor</text>
+  <text x="840" y="340" text-anchor="middle" fill="#6B7280" font-size="9">Property Risk Classifier</text>
 
-  <rect x="300" y="240" width="300" height="70" fill="#667EEA" stroke="#5A67D8" stroke-width="2" rx="8"/>
-  <text x="450" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Step 10: CREATE AGENT</text>
-  <text x="450" y="290" text-anchor="middle" font-size="10" fill="#E8EAFF">REIT_ADVISOR</text>
-  <text x="450" y="302" text-anchor="middle" font-size="9" fill="#C3C8FF">Orchestrates all tools</text>
+  <line x1="250" y1="310" x2="280" y2="310" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#darrow)"/>
+  <line x1="480" y1="310" x2="510" y2="310" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#darrow)"/>
+  <line x1="710" y1="310" x2="740" y2="310" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#darrow)"/>
 
-  <path d="M130,200 L130,240 L300,275" fill="none" stroke="#2196F3" stroke-width="2" stroke-dasharray="4"/>
-  <path d="M350,200 L350,240 L380,240" fill="none" stroke="#FF9800" stroke-width="2" stroke-dasharray="4"/>
+  <rect x="280" y="395" width="200" height="90" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <rect x="280" y="395" width="200" height="26" fill="url(#phase4)" rx="8"/>
+  <rect x="280" y="413" width="200" height="8" fill="url(#phase4)"/>
+  <circle cx="300" cy="408" r="10" fill="white" stroke="#DB2777" stroke-width="2"/>
+  <text x="300" y="412" text-anchor="middle" fill="#DB2777" font-size="10" font-weight="bold">9</text>
+  <text x="385" y="412" text-anchor="middle" fill="white" font-size="11" font-weight="bold">ML Functions</text>
+  <text x="380" y="440" text-anchor="middle" fill="#4B5563" font-size="9">4 SQL UDF Functions</text>
+  <text x="380" y="455" text-anchor="middle" fill="#6B7280" font-size="9">PREDICT_LEASE_RENEWAL()</text>
+  <text x="380" y="468" text-anchor="middle" fill="#6B7280" font-size="9">PREDICT_PROPERTY_RISK()</text>
 
-  <rect x="100" y="350" width="700" height="130" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="1" rx="6"/>
-  <text x="450" y="375" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Agent Capabilities</text>
+  <path d="M840,355 L840,390 L480,440" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#darrow)"/>
 
-  <rect x="120" y="390" width="150" height="35" fill="#E8F5E9" stroke="#4CAF50" rx="4"/>
-  <text x="195" y="412" text-anchor="middle" font-size="9" fill="#2E7D32">Property/Tenant/Lease</text>
-  <text x="195" y="422" text-anchor="middle" font-size="8" fill="#555">Structured Queries</text>
+  <rect x="550" y="395" width="320" height="90" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2.5" rx="10" filter="url(#dshadowLg)"/>
+  <rect x="550" y="395" width="320" height="28" fill="url(#phase5)" rx="10"/>
+  <rect x="550" y="415" width="320" height="8" fill="url(#phase5)"/>
+  <circle cx="575" cy="409" r="12" fill="white" stroke="#7C3AED" stroke-width="2"/>
+  <text x="575" y="414" text-anchor="middle" fill="#7C3AED" font-size="12" font-weight="bold">10</text>
+  <text x="720" y="414" text-anchor="middle" fill="white" font-size="14" font-weight="bold">CREATE AGENT</text>
+  <text x="710" y="443" text-anchor="middle" fill="#7C3AED" font-size="10">REALTY_INCOME.AGENT.REIT_ADVISOR</text>
+  <text x="710" y="460" text-anchor="middle" fill="#4B5563" font-size="9">Orchestrates: Portfolio Analytics | Market Performance</text>
+  <text x="710" y="475" text-anchor="middle" fill="#4B5563" font-size="9">Document Search (RAG) | Data to Chart</text>
 
-  <rect x="290" y="390" width="150" height="35" fill="#E3F2FD" stroke="#2196F3" rx="4"/>
-  <text x="365" y="412" text-anchor="middle" font-size="9" fill="#1565C0">Market/Dividends/KPIs</text>
-  <text x="365" y="422" text-anchor="middle" font-size="8" fill="#555">Time Series</text>
+  <line x1="480" y1="440" x2="550" y2="440" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#darrow)"/>
 
-  <rect x="460" y="390" width="150" height="35" fill="#FFF3E0" stroke="#FF9800" rx="4"/>
-  <text x="535" y="412" text-anchor="middle" font-size="9" fill="#E65100">Earnings/Filings/KB</text>
-  <text x="535" y="422" text-anchor="middle" font-size="8" fill="#555">Document Q&amp;A</text>
+  <path d="M380,265 L380,255 L710,255 L710,395" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="545" y="249" text-anchor="middle" fill="#2563EB" font-size="8">feeds agent tools</text>
 
-  <rect x="630" y="390" width="150" height="35" fill="#F3E5F5" stroke="#9C27B0" rx="4"/>
-  <text x="705" y="412" text-anchor="middle" font-size="9" fill="#6A1B9A">Charts &amp; Graphs</text>
-  <text x="705" y="422" text-anchor="middle" font-size="8" fill="#555">Visualization</text>
+  <path d="M610,355 L610,375 L680,395" fill="none" stroke="#EA580C" stroke-width="1.5" stroke-dasharray="4,3"/>
 
-  <rect x="120" y="440" width="320" height="30" fill="#FCE4EC" stroke="#F48FB1" rx="4"/>
-  <text x="280" y="460" text-anchor="middle" font-size="9" fill="#880E4F">ML: Lease Renewal Prediction | Risk Scoring | NOI Forecasting</text>
+  <rect x="50" y="520" width="1000" height="240" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5" rx="8" filter="url(#dshadow)"/>
+  <text x="550" y="548" text-anchor="middle" fill="#111827" font-size="14" font-weight="bold">Deployment Summary</text>
 
-  <rect x="460" y="440" width="320" height="30" fill="#E8EAF6" stroke="#7986CB" rx="4"/>
-  <text x="620" y="460" text-anchor="middle" font-size="9" fill="#283593">FIBO: Financial Ontology Compliance | Data Governance</text>
+  <rect x="70" y="565" width="300" height="175" fill="#FFFFFF" stroke="#D1D5DB" rx="6" filter="url(#dshadow)"/>
+  <text x="220" y="588" text-anchor="middle" fill="#374151" font-size="11" font-weight="bold">Execution Order</text>
+  <line x1="90" y1="597" x2="350" y2="597" stroke="#E5E7EB"/>
+  <text x="90" y="617" fill="#059669" font-size="9">01. 01_database_and_schema.sql</text>
+  <text x="90" y="633" fill="#059669" font-size="9">02. 02_create_tables.sql</text>
+  <text x="90" y="649" fill="#059669" font-size="9">03. 03_Financial_Industry_Business_Ontology.sql</text>
+  <text x="90" y="665" fill="#EA580C" font-size="9">04. 04_generate_synthetic_data.sql</text>
+  <text x="90" y="681" fill="#2563EB" font-size="9">05. 05_create_views.sql</text>
+  <text x="90" y="697" fill="#2563EB" font-size="9">06. 06_create_semantic_views.sql</text>
+  <text x="90" y="713" fill="#EA580C" font-size="9">07. 07_create_cortex_search.sql</text>
+  <text x="90" y="729" fill="#DB2777" font-size="9">08. 08_ml_models.ipynb (notebook)</text>
+
+  <rect x="390" y="565" width="300" height="175" fill="#FFFFFF" stroke="#D1D5DB" rx="6" filter="url(#dshadow)"/>
+  <text x="540" y="588" text-anchor="middle" fill="#374151" font-size="11" font-weight="bold">Objects Created</text>
+  <line x1="410" y1="597" x2="670" y2="597" stroke="#E5E7EB"/>
+  <text x="410" y="617" fill="#374151" font-size="9">1 Database, 4 Schemas</text>
+  <text x="410" y="637" fill="#374151" font-size="9">9 Tables (w/ FK relationships)</text>
+  <text x="410" y="657" fill="#374151" font-size="9">8 Analytics Views</text>
+  <text x="410" y="677" fill="#374151" font-size="9">2 Semantic Views</text>
+  <text x="410" y="697" fill="#374151" font-size="9">1 Cortex Search Service</text>
+  <text x="410" y="717" fill="#374151" font-size="9">2 ML Models (Registry)</text>
+  <text x="410" y="737" fill="#374151" font-size="9">4 SQL UDFs + 1 Agent</text>
+
+  <rect x="710" y="565" width="320" height="175" fill="#FFFFFF" stroke="#D1D5DB" rx="6" filter="url(#dshadow)"/>
+  <text x="870" y="588" text-anchor="middle" fill="#374151" font-size="11" font-weight="bold">Requirements</text>
+  <line x1="730" y1="597" x2="1010" y2="597" stroke="#E5E7EB"/>
+  <text x="730" y="617" fill="#374151" font-size="9">Role: ACCOUNTADMIN</text>
+  <text x="730" y="637" fill="#374151" font-size="9">Warehouse: MEDIUM (recommended)</text>
+  <text x="730" y="657" fill="#374151" font-size="9">Cortex AI: Enabled</text>
+  <text x="730" y="677" fill="#374151" font-size="9">Cross-Region: ANY_REGION</text>
+  <text x="730" y="697" fill="#374151" font-size="9">Storage: ~50 MB</text>
+  <text x="730" y="717" fill="#374151" font-size="9">Setup Time: 10-15 min</text>
+  <text x="730" y="737" fill="#374151" font-size="9">ML Packages: snowflake-ml-python</text>
 </svg>

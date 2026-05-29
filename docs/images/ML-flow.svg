@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="model1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#10B981"/>
+    </linearGradient>
+    <linearGradient id="model2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563EB"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="udf1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EA580C"/>
+      <stop offset="100%" style="stop-color:#F97316"/>
+    </linearGradient>
+    <linearGradient id="udf2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9333EA"/>
+      <stop offset="100%" style="stop-color:#A855F7"/>
+    </linearGradient>
+    <linearGradient id="registryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DB2777"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+    <filter id="mshadow" x="-4%" y="-4%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <filter id="mshadowSm" x="-4%" y="-4%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+    <marker id="marrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9CA3AF"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="800" fill="#FFFFFF" rx="12"/>
+
+  <text x="550" y="38" text-anchor="middle" fill="#111827" font-size="24" font-weight="bold">ML Models &amp; Prediction Pipeline</text>
+  <text x="550" y="58" text-anchor="middle" fill="#6B7280" font-size="12">Training, Registration, and Inference Architecture</text>
+
+  <rect x="50" y="80" width="480" height="310" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="10" filter="url(#mshadow)"/>
+  <rect x="50" y="80" width="480" height="30" fill="url(#model1Grad)" rx="10"/>
+  <rect x="50" y="102" width="480" height="8" fill="url(#model1Grad)"/>
+  <text x="290" y="101" text-anchor="middle" fill="white" font-size="13" font-weight="bold">MODEL 1: Lease Renewal Predictor</text>
+
+  <text x="75" y="132" fill="#059669" font-size="11" font-weight="bold">Algorithm</text>
+  <text x="75" y="148" fill="#4B5563" font-size="10">GradientBoostingClassifier</text>
+  <text x="75" y="163" fill="#6B7280" font-size="9">n_estimators=100, max_depth=5, lr=0.1</text>
+
+  <text x="75" y="190" fill="#059669" font-size="11" font-weight="bold">Input Features (12)</text>
+
+  <rect x="75" y="198" width="200" height="145" fill="#F9FAFB" stroke="#E5E7EB" rx="4" filter="url(#mshadowSm)"/>
+  <text x="85" y="216" fill="#374151" font-size="9">REMAINING_TERM_MONTHS</text>
+  <text x="85" y="232" fill="#374151" font-size="9">ANNUAL_RENT</text>
+  <text x="85" y="248" fill="#374151" font-size="9">RENT_ESCALATION_RATE</text>
+  <text x="85" y="264" fill="#374151" font-size="9">TRIPLE_NET (boolean)</text>
+  <text x="85" y="280" fill="#374151" font-size="9">LEASE_TERM_MONTHS</text>
+  <text x="85" y="296" fill="#374151" font-size="9">CREDIT_RATING (encoded)</text>
+  <text x="85" y="312" fill="#374151" font-size="9">ANNUAL_REVENUE</text>
+  <text x="85" y="328" fill="#374151" font-size="9">PUBLIC_COMPANY (boolean)</text>
+
+  <rect x="285" y="198" width="225" height="78" fill="#ECFDF5" stroke="#A7F3D0" rx="4" filter="url(#mshadowSm)"/>
+  <text x="300" y="218" fill="#059669" font-size="10" font-weight="bold">Output</text>
+  <text x="300" y="237" fill="#374151" font-size="10">P(Renewal) = 0.0 to 1.0</text>
+  <text x="300" y="255" fill="#6B7280" font-size="9">Binary classification: Renewed / Not</text>
+  <text x="300" y="270" fill="#6B7280" font-size="9">Probability threshold: 0.5</text>
+
+  <rect x="285" y="286" width="225" height="57" fill="#FFFFFF" stroke="#D1D5DB" rx="4" filter="url(#mshadowSm)"/>
+  <text x="300" y="305" fill="#059669" font-size="10" font-weight="bold">Use Cases</text>
+  <text x="300" y="321" fill="#4B5563" font-size="9">Revenue forecasting &amp; vacancy planning</text>
+  <text x="300" y="336" fill="#4B5563" font-size="9">Proactive tenant retention strategy</text>
+
+  <rect x="75" y="353" width="435" height="25" fill="#ECFDF5" stroke="#059669" rx="4" filter="url(#mshadowSm)"/>
+  <text x="292" y="370" text-anchor="middle" fill="#059669" font-size="9" font-weight="bold">Registry: REALTY_INCOME.ML.LEASE_RENEWAL_PREDICTOR v1</text>
+
+  <rect x="570" y="80" width="480" height="310" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="10" filter="url(#mshadow)"/>
+  <rect x="570" y="80" width="480" height="30" fill="url(#model2Grad)" rx="10"/>
+  <rect x="570" y="102" width="480" height="8" fill="url(#model2Grad)"/>
+  <text x="810" y="101" text-anchor="middle" fill="white" font-size="13" font-weight="bold">MODEL 2: Property Risk Classifier</text>
+
+  <text x="595" y="132" fill="#2563EB" font-size="11" font-weight="bold">Algorithm</text>
+  <text x="595" y="148" fill="#4B5563" font-size="10">GradientBoostingClassifier</text>
+  <text x="595" y="163" fill="#6B7280" font-size="9">n_estimators=150, max_depth=6, lr=0.1</text>
+
+  <text x="595" y="190" fill="#2563EB" font-size="11" font-weight="bold">Input Features (13)</text>
+
+  <rect x="595" y="198" width="200" height="145" fill="#F9FAFB" stroke="#E5E7EB" rx="4" filter="url(#mshadowSm)"/>
+  <text x="605" y="216" fill="#374151" font-size="9">GEOGRAPHIC_RISK</text>
+  <text x="605" y="232" fill="#374151" font-size="9">TENANT_CREDIT_RISK</text>
+  <text x="605" y="248" fill="#374151" font-size="9">MARKET_RISK</text>
+  <text x="605" y="264" fill="#374151" font-size="9">INTEREST_RATE_RISK</text>
+  <text x="605" y="280" fill="#374151" font-size="9">ENVIRONMENTAL_RISK</text>
+  <text x="605" y="296" fill="#374151" font-size="9">LEASE_EXPIRATION_RISK</text>
+  <text x="605" y="312" fill="#374151" font-size="9">CAP_RATE</text>
+  <text x="605" y="328" fill="#374151" font-size="9">+ SQFT, Year, Term, Rent...</text>
+
+  <rect x="805" y="198" width="225" height="78" fill="#EFF6FF" stroke="#BFDBFE" rx="4" filter="url(#mshadowSm)"/>
+  <text x="820" y="218" fill="#2563EB" font-size="10" font-weight="bold">Output</text>
+  <text x="820" y="237" fill="#374151" font-size="10">Risk Level: Low | Medium | High</text>
+  <text x="820" y="255" fill="#6B7280" font-size="9">Multi-class classification (3 classes)</text>
+  <text x="820" y="270" fill="#6B7280" font-size="9">Weighted by 6 risk sub-scores</text>
+
+  <rect x="805" y="286" width="225" height="57" fill="#FFFFFF" stroke="#D1D5DB" rx="4" filter="url(#mshadowSm)"/>
+  <text x="820" y="305" fill="#2563EB" font-size="10" font-weight="bold">Use Cases</text>
+  <text x="820" y="321" fill="#4B5563" font-size="9">Portfolio risk monitoring &amp; alerting</text>
+  <text x="820" y="336" fill="#4B5563" font-size="9">Disposition / acquisition analysis</text>
+
+  <rect x="595" y="353" width="435" height="25" fill="#EFF6FF" stroke="#2563EB" rx="4" filter="url(#mshadowSm)"/>
+  <text x="812" y="370" text-anchor="middle" fill="#2563EB" font-size="9" font-weight="bold">Registry: REALTY_INCOME.ML.PROPERTY_RISK_CLASSIFIER v1</text>
+
+  <text x="550" y="425" text-anchor="middle" fill="#374151" font-size="12" font-weight="bold">SQL UDF FUNCTIONS (Rule-Based Inference)</text>
+  <line x1="150" y1="435" x2="950" y2="435" stroke="#E5E7EB" stroke-width="1"/>
+
+  <rect x="50" y="450" width="240" height="140" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#mshadow)"/>
+  <rect x="50" y="450" width="240" height="26" fill="url(#udf1Grad)" rx="8"/>
+  <rect x="50" y="468" width="240" height="8" fill="url(#udf1Grad)"/>
+  <text x="170" y="469" text-anchor="middle" fill="white" font-size="10" font-weight="bold">PREDICT_LEASE_RENEWAL()</text>
+  <text x="70" y="498" fill="#EA580C" font-size="9" font-weight="bold">Parameters:</text>
+  <text x="70" y="514" fill="#4B5563" font-size="8">remaining_term, credit_rating,</text>
+  <text x="70" y="528" fill="#4B5563" font-size="8">annual_rent, occupancy, escalation</text>
+  <text x="70" y="548" fill="#EA580C" font-size="9" font-weight="bold">Returns: FLOAT (0.0 - 1.0)</text>
+  <text x="70" y="566" fill="#6B7280" font-size="8">Rule-based renewal probability</text>
+  <text x="70" y="580" fill="#6B7280" font-size="8">Credit-weighted with term adjustment</text>
+
+  <rect x="310" y="450" width="240" height="140" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#mshadow)"/>
+  <rect x="310" y="450" width="240" height="26" fill="url(#udf1Grad)" rx="8"/>
+  <rect x="310" y="468" width="240" height="8" fill="url(#udf1Grad)"/>
+  <text x="430" y="469" text-anchor="middle" fill="white" font-size="10" font-weight="bold">PREDICT_PROPERTY_RISK()</text>
+  <text x="330" y="498" fill="#EA580C" font-size="9" font-weight="bold">Parameters:</text>
+  <text x="330" y="514" fill="#4B5563" font-size="8">property_type, credit_rating,</text>
+  <text x="330" y="528" fill="#4B5563" font-size="8">remaining_months, cap_rate, state</text>
+  <text x="330" y="548" fill="#EA580C" font-size="9" font-weight="bold">Returns: OBJECT</text>
+  <text x="330" y="566" fill="#6B7280" font-size="8">{risk_score, risk_level, key_factors[]}</text>
+  <text x="330" y="580" fill="#6B7280" font-size="8">Multi-factor composite scoring</text>
+
+  <rect x="570" y="450" width="240" height="140" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#mshadow)"/>
+  <rect x="570" y="450" width="240" height="26" fill="url(#udf2Grad)" rx="8"/>
+  <rect x="570" y="468" width="240" height="8" fill="url(#udf2Grad)"/>
+  <text x="690" y="469" text-anchor="middle" fill="white" font-size="10" font-weight="bold">FORECAST_NOI()</text>
+  <text x="590" y="498" fill="#9333EA" font-size="9" font-weight="bold">Parameters:</text>
+  <text x="590" y="514" fill="#4B5563" font-size="8">current_noi, growth_rate,</text>
+  <text x="590" y="528" fill="#4B5563" font-size="8">periods_ahead</text>
+  <text x="590" y="548" fill="#9333EA" font-size="9" font-weight="bold">Returns: TABLE</text>
+  <text x="590" y="566" fill="#6B7280" font-size="8">(period, forecast_noi,</text>
+  <text x="590" y="580" fill="#6B7280" font-size="8"> cumulative_noi, growth_pct)</text>
+
+  <rect x="830" y="450" width="220" height="140" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" rx="8" filter="url(#mshadow)"/>
+  <rect x="830" y="450" width="220" height="26" fill="url(#udf2Grad)" rx="8"/>
+  <rect x="830" y="468" width="220" height="8" fill="url(#udf2Grad)"/>
+  <text x="940" y="469" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CALCULATE_PROPERTY_SCORE()</text>
+  <text x="850" y="498" fill="#9333EA" font-size="9" font-weight="bold">Parameters:</text>
+  <text x="850" y="514" fill="#4B5563" font-size="8">cap_rate, occupancy, credit,</text>
+  <text x="850" y="528" fill="#4B5563" font-size="8">remaining_term, noi_growth</text>
+  <text x="850" y="548" fill="#9333EA" font-size="9" font-weight="bold">Returns: OBJECT</text>
+  <text x="850" y="566" fill="#6B7280" font-size="8">{score(0-100), grade(A+-B),</text>
+  <text x="850" y="580" fill="#6B7280" font-size="8"> recommendation(text)}</text>
+
+  <text x="550" y="625" text-anchor="middle" fill="#374151" font-size="12" font-weight="bold">TRAINING DATA PIPELINE</text>
+  <line x1="150" y1="635" x2="950" y2="635" stroke="#E5E7EB" stroke-width="1"/>
+
+  <rect x="50" y="650" width="160" height="55" fill="#FFFFFF" stroke="#D1D5DB" rx="6" filter="url(#mshadow)"/>
+  <text x="130" y="672" text-anchor="middle" fill="#374151" font-size="9" font-weight="bold">RAW TABLES</text>
+  <text x="130" y="690" text-anchor="middle" fill="#6B7280" font-size="8">PROPERTIES</text>
+  <text x="130" y="702" text-anchor="middle" fill="#6B7280" font-size="8">LEASES | TENANTS | RISK</text>
+
+  <line x1="210" y1="678" x2="255" y2="678" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#marrow)"/>
+
+  <rect x="255" y="650" width="160" height="55" fill="#FFFFFF" stroke="#D1D5DB" rx="6" filter="url(#mshadow)"/>
+  <text x="335" y="672" text-anchor="middle" fill="#374151" font-size="9" font-weight="bold">FEATURE JOIN</text>
+  <text x="335" y="690" text-anchor="middle" fill="#6B7280" font-size="8">Multi-table SQL JOIN</text>
+  <text x="335" y="702" text-anchor="middle" fill="#6B7280" font-size="8">500-1000 training rows</text>
+
+  <line x1="415" y1="678" x2="460" y2="678" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#marrow)"/>
+
+  <rect x="460" y="650" width="160" height="55" fill="#FFFFFF" stroke="#D1D5DB" rx="6" filter="url(#mshadow)"/>
+  <text x="540" y="672" text-anchor="middle" fill="#374151" font-size="9" font-weight="bold">PREPROCESSING</text>
+  <text x="540" y="690" text-anchor="middle" fill="#6B7280" font-size="8">LabelEncoder (categorical)</text>
+  <text x="540" y="702" text-anchor="middle" fill="#6B7280" font-size="8">fillna(0) | 80/20 split</text>
+
+  <line x1="620" y1="678" x2="665" y2="678" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#marrow)"/>
+
+  <rect x="665" y="650" width="160" height="55" fill="#ECFDF5" stroke="#059669" stroke-width="1.5" rx="6" filter="url(#mshadow)"/>
+  <text x="745" y="672" text-anchor="middle" fill="#059669" font-size="9" font-weight="bold">TRAINING</text>
+  <text x="745" y="690" text-anchor="middle" fill="#6B7280" font-size="8">GradientBoosting.fit()</text>
+  <text x="745" y="702" text-anchor="middle" fill="#6B7280" font-size="8">sklearn + evaluation</text>
+
+  <line x1="825" y1="678" x2="870" y2="678" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#marrow)"/>
+
+  <rect x="870" y="650" width="170" height="55" fill="#FDF2F8" stroke="#DB2777" stroke-width="1.5" rx="6" filter="url(#mshadow)"/>
+  <text x="955" y="672" text-anchor="middle" fill="#DB2777" font-size="9" font-weight="bold">REGISTRY</text>
+  <text x="955" y="690" text-anchor="middle" fill="#6B7280" font-size="8">Registry.log_model()</text>
+  <text x="955" y="702" text-anchor="middle" fill="#6B7280" font-size="8">REALTY_INCOME.ML schema</text>
+
+  <rect x="50" y="730" width="1000" height="50" fill="#F9FAFB" stroke="#E5E7EB" rx="6" filter="url(#mshadow)"/>
+  <text x="100" y="755" fill="#374151" font-size="10" font-weight="bold">Metrics:</text>
+  <rect x="170" y="745" width="10" height="10" fill="#059669" rx="2"/>
+  <text x="185" y="755" fill="#059669" font-size="9">Lease Renewal - Accuracy based on credit + term features</text>
+  <rect x="500" y="745" width="10" height="10" fill="#2563EB" rx="2"/>
+  <text x="515" y="755" fill="#2563EB" font-size="9">Property Risk - Multi-class (Low/Med/High) from 6 risk factors</text>
+  <text x="100" y="772" fill="#6B7280" font-size="9">Feature importances exported | Classification reports generated | Models versioned in Snowflake ML Registry</text>
+</svg>
